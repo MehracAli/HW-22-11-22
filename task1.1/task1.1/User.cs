@@ -8,33 +8,58 @@ namespace task1._1
 {
     internal class User
     {
+        #region Username
         private protected string _username;
-        public string Username;
+        public string Username
+        {
+            get 
+            {
+                return _username;
+            }
+            set 
+            {
+                Console.WriteLine("Enter Username: ");
+                EnterUsername();
+            }
+        }
+        #endregion
+
+        #region Password
         private protected string _password;
-        public string Password;
-        
-//Constructor
+        public string Password 
+        {
+            get 
+            {
+                return _password;
+            }
+            set 
+            {
+                Console.WriteLine("Enter Password:");
+                EnterPassword();
+            }
+        }
+        #endregion
+
         public User(string username, string password)
         {
             Username = username;
             Password = password;
         }
-//Methods
+
         #region Methods
-        public void Login()
+        public void EnterUsername()
         {
             Console.Write("Login: ");
             string UserName = Console.ReadLine();
-            Username = UserName;
+            _username = UserName;
             if (UserName.Length > 6)
             {
-                EnterPassword();
                 _username = UserName;
             }
             else
             {
-                Console.WriteLine("Enter Valid Username");
-                Login();
+                Console.WriteLine("Enter Valid Username: ");
+                EnterUsername();
             }
         }
 
@@ -42,8 +67,8 @@ namespace task1._1
         {
             Console.Write("Password: ");
             string Pswrd = Console.ReadLine();
-            Password = Pswrd;
-            
+            _password = Pswrd;
+
             char[] ValueChars = Pswrd.ToCharArray();
             string ToUp = Pswrd.ToUpper();
             char[] ToUpChars = ToUp.ToCharArray();

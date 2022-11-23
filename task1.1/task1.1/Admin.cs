@@ -17,12 +17,12 @@ namespace task1._1
             Section = section;
         }
 
-
-        public void IsSuperAdminAndSection()
+        #region Methods
+        public void FullInfo()
         {
-            Login();
             Console.WriteLine(" ");
             Console.WriteLine($"IsSuperAdmin: {IsSuperAdmin}; Section: {Section}; Username: {_username}; Password: {_password}");
         }
+        #endregion
     }
 }
