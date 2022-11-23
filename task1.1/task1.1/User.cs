@@ -69,32 +69,44 @@ namespace task1._1
             string Pswrd = Console.ReadLine();
             _password = Pswrd;
 
-            char[] ValueChars = Pswrd.ToCharArray();
-            string ToUp = Pswrd.ToUpper();
-            char[] ToUpChars = ToUp.ToCharArray();
+            char[] PswrdChars = Pswrd.ToCharArray();
             char[] numbers = { '1', '2','3', '4', '5', '6', '7', '8', '9' };
             int count = 0;
-            int count2 = 0;
-            for (int i = 0; i < ValueChars.Length; i++)
+
+            for (int i = 0; i < PswrdChars.Length; i++)
             {
-                for(int i2 = 0; i2<numbers.Length; i2++)
+                for (int i2 = 0; i2 < numbers.Length; i2++)
                 {
-                    if (ValueChars[i] == numbers[i2])
+                    if (PswrdChars[i] == numbers[i2])
                     {
                         count++;
                     }
                 }
             }
 
-            if (count > 0)
+
+            if(Pswrd != Pswrd.ToLower() && count>0)
             {
                 _password = Pswrd;
             }
             else
             {
-                Console.WriteLine("Enter Valid Password");
+                Console.WriteLine("Enter valid Password: ");
                 EnterPassword();
             }
+
+
+
+
+            //if (count > 0)
+            //{
+            //    _password = Pswrd;
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Enter Valid Password");
+            //    EnterPassword();
+            //}
         }
         #endregion
     }
