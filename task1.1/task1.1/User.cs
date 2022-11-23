@@ -72,16 +72,21 @@ namespace task1._1
             char[] ValueChars = Pswrd.ToCharArray();
             string ToUp = Pswrd.ToUpper();
             char[] ToUpChars = ToUp.ToCharArray();
+            char[] numbers = { '1', '2','3', '4', '5', '6', '7', '8', '9' };
             int count = 0;
-
+            int count2 = 0;
             for (int i = 0; i < ValueChars.Length; i++)
             {
-                if (ValueChars[i] == ToUpChars[i])
+                for(int i2 = 0; i2<numbers.Length; i2++)
                 {
-                    count++;
+                    if (ValueChars[i] == numbers[i2])
+                    {
+                        count++;
+                    }
                 }
             }
-            if (count > 0)
+
+            if (count > 0 && count2 > 0)
             {
                 _password = Pswrd;
             }
