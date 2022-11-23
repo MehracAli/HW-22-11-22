@@ -22,7 +22,7 @@ namespace task1._1
         {
             Login();
             Console.WriteLine(" ");
-            Console.WriteLine($"IsSuperAdmin: {IsSuperAdmin}; Section: {Section}; Username: {Username}; Password: {Password}");
+            Console.WriteLine($"IsSuperAdmin: {IsSuperAdmin}; Section: {Section}; Username: {_username}; Password: {_password}");
         }
     }
 }

@@ -8,9 +8,9 @@ namespace task1._1
 {
     internal class User
     {
-        private string _username;
+        private protected string _username;
         public string Username;
-        private string _password;
+        private protected string _password;
         public string Password;
         
 //Constructor
