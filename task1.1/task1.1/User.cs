@@ -86,7 +86,7 @@ namespace task1._1
                 }
             }
 
-            if (count > 0 && count2 > 0)
+            if (count > 0)
             {
                 _password = Pswrd;
             }
